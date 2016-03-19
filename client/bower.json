@@ -1,0 +1,29 @@
+{
+  "name": "mapbeo",
+  "description": "This website use for searching stores and display them on map",
+  "main": "index.html",
+  "authors": [
+    "Hai Bui"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mapbeo"
+  ],
+  "homepage": "https://github.com/buihoanghai/mapbeo",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "underscore": "~1.8.3",
+    "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
+	"angular-mocks": "1.4.5"
+  }
+}
