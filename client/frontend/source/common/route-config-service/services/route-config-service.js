@@ -1,5 +1,5 @@
-String.prototype.toDash = function() {
-  return this.replace(/([A-Z])/g, function($1) {
+String.prototype.toDash = function () {
+  return this.replace(/([A-Z])/g, function ($1) {
     return "-" + $1.toLowerCase();
   });
 };
@@ -7,17 +7,14 @@ String.prototype.toDash = function() {
 angular.module('common.routeConfig')
 
 .provider('common.routeConfig.routeConfigService', [
-  function() {
+  function () {
 
     function viewConfig(baseName, controllerName, tplName, options) {
       var cnf = {
         controller: 'app.' + baseName + '.' + controllerName + 'Controller'
       };
 
-      if (options && options.controllerAs) {
-        cnf.controller += options.controllerAs === true ?
-          ' as ' + baseName : ' as ' + options.controllerAs;
-      }
+      cnf.controller += ' as ' + 'vm';
 
       if (tplName) {
         var _t = 'app/' + baseName + '/_tpl/' + tplName + '.tpl.html';
@@ -29,11 +26,11 @@ angular.module('common.routeConfig')
       return cnf;
     }
 
-    this.$get = function() {
+    this.$get = function () {
       return this;
-    };   
+    };
 
-    this.config = function(url, name, options) {
+    this.config = function (url, name, options) {
       //- State name
       var baseName = name.split(".")[0];
 
@@ -68,7 +65,7 @@ angular.module('common.routeConfig')
 
       //- Set stateparams in URL or as hidden params
       if (url) {
-        p.url = url 
+        p.url = url
       } else {
       }
       return p;
