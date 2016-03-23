@@ -1,0 +1,13 @@
+.region__container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: $region-padding;
+    padding-right: $region-padding;
+
+    @media #{$breakpoint-max} {
+        width: $region-max-width;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
