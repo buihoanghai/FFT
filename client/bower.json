@@ -1,5 +1,5 @@
 {
-  "name": "mapbeo",
+  "name": "FFT",
   "description": "This website use for searching stores and display them on map",
   "main": "index.html",
   "authors": [
@@ -7,9 +7,9 @@
   ],
   "license": "MIT",
   "keywords": [
-    "mapbeo"
+    "FFT"
   ],
-  "homepage": "https://github.com/buihoanghai/mapbeo",
+  "homepage": "https://github.com/buihoanghai/FFT",
   "moduleType": [],
   "private": true,
   "ignore": [
