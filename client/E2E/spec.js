@@ -1,6 +1,6 @@
 describe('Protractor Demo App', function() {
   it('should start game when click button new-game', function() {
-    browser.get('http://localhost:81/');
+    browser.get('http://localhost:84/');
   
     element(by.id('new-game')).click();
 

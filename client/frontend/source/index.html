@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="assets/st.<%= version %>.css" />
     @@include('grunt_assets/index.scripts.header.html')
 </head>
-<body> 
-  <div class="region__container--main">  
-    <div ui-view="main"></div>
-  </div>
-    @@include('grunt_assets/index.scripts.footer.html')
+<body>
+<menu-top>
+  
+</menu-top>
+<div class="region__container--main">
+  <div ui-view="main"></div>
+</div>
+@@include('grunt_assets/index.scripts.footer.html')
 </body>
 </html> 
