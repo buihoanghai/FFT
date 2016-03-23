@@ -15,7 +15,7 @@
       //- If the URL does not match any state
       $urlRouterProvider.otherwise('/');
       //- Set html5mode and use '!' as url-prefix for legacy browsers
-      $locationProvider.hashPrefix('!');
+   //   $locationProvider.hashPrefix('!');
       $locationProvider.html5Mode(false);
     }
 ]);

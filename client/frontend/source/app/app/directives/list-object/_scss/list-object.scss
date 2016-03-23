@@ -1,17 +1,23 @@
 ﻿.list-object {
     .list-tiles {
         list-style: none;
-        margin: 100px auto;
-        height: 550px;
-        width: 320px;
+        margin: 0 auto;
+        height: 355px;
+        width: 200px;
+        
+        @media #{$media-xs} {
+            width: 425px;
+        }
         @media #{$media-sm} {
             width: 640px;
         }
+
         @media #{$media-md} {
-            width: 960px;
+            width: 850px;
         }
+
         @media #{$media-lg} {
-            width: 1280px;
+            width: 1275px;
         }
 
         li {
@@ -21,9 +27,7 @@
             -webkit-transform-style: preserve-3d;
             -webkit-transition-property: perspective;
             -webkit-transition-duration: 0.5s;
-            margin-bottom: 135px;
-
-
+            margin: 30px 0 50px 12px; 
 
             &:hover {
                 -webkit-perspective: 5000;
@@ -35,7 +39,7 @@
                 .object-info {
                     -webkit-transform: rotateY(0deg);
                     -webkit-box-shadow: 0 5px 10px #888;
-                    margin: -175px 0 0 30px;
+                    margin: -175px 0 0 25px;
                 }
             }
 
@@ -46,15 +50,17 @@
                 -webkit-box-shadow: 0 3px 10px #888;
                 -webkit-transition-property: transform;
                 -webkit-transition-duration: 0.5s;
+                width: 200px;
+                height: 300px;
             }
         }
     }
 
     .object-info {
         border: 10px solid #fcfafa;
-        padding: 20px;
-        width: 260px;
-        height: 250px;
+        padding: 10px;
+        width: 150px;
+        height: 182px;
         background-color: #deddcd;
         margin: -195px 0 0 55px;
         position: absolute;
@@ -84,9 +90,11 @@
             display: block;
             width: 80px;
             text-align: center;
-            margin: 0 auto;
             -moz-border-radius: 5px;
             -webkit-border-radius: 5px;
+            margin: 10px 15px;
+            position: absolute;
+            bottom: -35px;
 
             &:hover, :focus {
                 background-color: #6a191f;
