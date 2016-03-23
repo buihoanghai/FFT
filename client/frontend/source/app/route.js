@@ -11,7 +11,10 @@
       $stateProvider
          .state(
            'home',
-           route.config('/', 'home'));
+           route.config('/', 'home'))
+      .state(
+           'object',
+           route.config('/:objectID', 'object'));
       //- If the URL does not match any state
       $urlRouterProvider.otherwise('/');
       //- Set html5mode and use '!' as url-prefix for legacy browsers

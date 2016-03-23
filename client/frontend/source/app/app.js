@@ -2,6 +2,7 @@
   'ui.router',
   'common.routeConfig',
   'app.home',
+  'app.object',
   'templates-app',
   'templates-common',
   'ngSanitize'
