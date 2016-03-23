@@ -11,3 +11,4 @@ bin-release/
 # information for Eclipse / Flash Builder.
 client/frontend/dist/develop/
 client/node_modules/
+client/frontend/source/grunt_assets/sass.temp/

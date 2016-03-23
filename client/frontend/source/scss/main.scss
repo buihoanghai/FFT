@@ -5,7 +5,11 @@
 * {
     box-sizing: border-box;
 }
+/* include base*/
+@import 'common/base.scss';
 
 
-/* include module*/
+/* include directive*/
+@import '../app/app/directives/list-object/_scss/list-object.scss';
+/* include page*/
 @import '../app/home/_scss/home.scss';

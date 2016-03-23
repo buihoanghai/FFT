@@ -8,4 +8,108 @@ body {
   box-sizing: border-box;
 }
 
-/* include module*/
+/* include base*/
+/* BASIC RESET */
+/* line 2, ../../scss/common/base.scss */
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+  margin: 0;
+  padding: 0;
+}
+
+/* COMMON CLASSES */
+/* line 7, ../../scss/common/base.scss */
+.break {
+  clear: both;
+}
+
+/* include directive*/
+/* line 2, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles {
+  list-style: none;
+  margin: 100px 0;
+  height: 550px;
+}
+/* line 7, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles li {
+  display: inline;
+  float: left;
+  -webkit-perspective: 500;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition-property: perspective;
+  -webkit-transition-duration: 0.5s;
+}
+/* line 15, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles li:hover {
+  -webkit-perspective: 5000;
+}
+/* line 18, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles li:hover img {
+  -webkit-transform: rotateY(0deg);
+}
+/* line 22, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles li:hover .object-info {
+  -webkit-transform: rotateY(0deg);
+  -webkit-box-shadow: 0 5px 10px #888;
+  margin: -175px 0 0 30px;
+}
+/* line 29, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .list-tiles li img {
+  border: 10px solid #fcfafa;
+  -webkit-transform: rotateY(30deg);
+  -moz-box-shadow: 0 3px 10px #888;
+  -webkit-box-shadow: 0 3px 10px #888;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+}
+/* line 40, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .object-info {
+  border: 10px solid #fcfafa;
+  padding: 20px;
+  width: 260px;
+  height: 250px;
+  background-color: #deddcd;
+  margin: -195px 0 0 55px;
+  position: absolute;
+  -moz-box-shadow: 0 20px 40px #888;
+  -webkit-box-shadow: 0 20px 40px #888;
+  -webkit-transform: translateZ(30px) rotateY(30deg);
+  -webkit-transition-property: transform, box-shadow, margin;
+  -webkit-transition-duration: 0.5s;
+}
+/* line 54, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .object-info h3 {
+  color: #7a3f3a;
+  font-variant: small-caps;
+  font-family: Georgia,serif,Times;
+  text-align: center;
+  padding-bottom: 15px;
+}
+/* line 62, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .object-info p {
+  padding-bottom: 15px;
+}
+/* line 66, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .object-info a {
+  background-color: #7a3f3a;
+  padding: 5px 10px;
+  color: #eee;
+  text-decoration: none;
+  display: block;
+  width: 80px;
+  text-align: center;
+  margin: 0 auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+/* line 78, ../../app/app/directives/list-object/_scss/list-object.scss */
+.list-object .object-info a:hover, .list-object .object-info a :focus {
+  background-color: #6a191f;
+  color: #fff;
+}
+
+/* include page*/
+/* line 1, ../../app/home/_scss/home.scss */
+#home {
+  max-width: 980px;
+  margin: auto;
+}
