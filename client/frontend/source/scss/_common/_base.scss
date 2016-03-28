@@ -8,10 +8,13 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
 /* BASIC*/
 body {
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    background: url('/assets/img/background/bg.<%=version%>.jpg') no-repeat center;
+    background-size: cover;
 }
 
 * {
     box-sizing: border-box;
+    opacity: 0.985;
 }
 
 

@@ -27,6 +27,7 @@ $media-lg: "#{$min-width}#{$screen-lg})";
 /* include directive*/
 @import "../app/app/directives/list-object/_scss/list-object";
 @import "../app/app/directives/menu-top/_scss/menu-top";
+@import "../app/app/directives/search/_scss/search";
 /* include page*/
 @import "../app/home/_scss/home";
 @import "../app/object/_scss/object";
