@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* define variable*/
+/*media width*/
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1300px;
+
+$region-max-width: 1300px;
+$region-padding: 15px;
+$breakpoint-max: "only screen and (min-width:#{$region-max-width})";
+$main-background-color: #f1f1f1;
+$min-width:'only screen and (min-width :';
+$media-xs: "#{$min-width}#{$screen-xs})";
+$media-sm: "#{$min-width}#{$screen-sm})";
+$media-md: "#{$min-width}#{$screen-md})";
+$media-lg: "#{$min-width}#{$screen-lg})";
+
+   
+  @import "_common/_base.scss";
+ @import "_mixins/_clearfix.scss";
+ @import "_region/_region.scss";
+ @import "_region/_region__container--main.scss";
+ @import "_region/_region__container.scss";
+ @import "foundation/_functions.scss";
+
+   @import "../app/app/directives/list-object/_scss/list-object.scss";
+ @import "../app/app/directives/menu-top/_scss/menu-top.scss";
+ @import "../app/app/directives/search/_scss/search.scss";
+ @import "../app/home/_scss/home.scss";
+ @import "../app/object/_scss/object.scss";
+
+ 

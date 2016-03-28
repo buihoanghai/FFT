@@ -11,6 +11,12 @@ module.exports = {
       'frontend/source/app/*/**/*.js',
       '!frontend/source/app/**/*.spec.js'
     ],
+	scss:[
+		'frontend/source/app/**/*.scss',
+		'frontend/source/scss/**/*.scss',
+		'!frontend/source/scss/**/main.scss',
+		'!frontend/source/scss/**/main-import.scss',
+	],
     jsunit: [ 'frontend/source/app/**/*.spec.js' ],
 
     atpl: [ 'frontend/source/app/**/*.tpl.html' ],
