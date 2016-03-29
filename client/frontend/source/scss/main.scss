@@ -15,18 +15,5 @@ $media-xs: "#{$min-width}#{$screen-xs})";
 $media-sm: "#{$min-width}#{$screen-sm})";
 $media-md: "#{$min-width}#{$screen-md})";
 $media-lg: "#{$min-width}#{$screen-lg})";
-/* include tool*/
-@import "_common/base";
-@import "_mixins/clearfix";
-@import "_region/region";
-@import "_region/region__container";
-@import "_region/region__container--main";
-@import "foundation/_functions";
 
-
-/* include directive*/
-@import "../app/app/directives/list-object/_scss/list-object";
-@import "../app/app/directives/menu-top/_scss/menu-top";
-/* include page*/
-@import "../app/home/_scss/home";
-@import "../app/object/_scss/object";
+   @@include('main-import.scss')

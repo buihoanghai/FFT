@@ -28,7 +28,7 @@ module.exports = function (grunt) {
                     cacheLocation: 'frontend/source/grunt_assets/sass.temp/'
                 },
                 files: {
-                    'frontend/source/grunt_assets/sass.temp/main.css': 'frontend/source/scss/main.scss'
+                    'frontend/source/grunt_assets/sass.temp/main.css': 'frontend/source/scss/main-import.scss'
                 }
             },
 			    release: {
@@ -312,6 +312,21 @@ module.exports = function (grunt) {
         }
       }
     },
+		main_sass:{
+		unit: {
+				 dir: 'frontend/source/',
+					result_dir: 'frontend/source/grunt_assets/sass.temp/',
+					file: 'grunt_assets/main-import.scss',
+					base: 'frontend/source/',
+					
+					files: [
+					  {
+						  src: ['<%= app_files.scss %>']
+					  },
+						
+					]
+				}
+			},
         index_scripts: {
             develop_header: {
                 dir: 'frontend/source/',
@@ -340,6 +355,7 @@ module.exports = function (grunt) {
                   }
                 ]
             },
+			
 			  release_header: {
         dir: 'frontend/source/',
         result_dir: 'frontend/source/grunt_assets/index.scripts.temp/',
@@ -367,7 +383,15 @@ module.exports = function (grunt) {
                 files: {
                     'frontend/source/grunt_assets/index.temp/index.html': ['frontend/source/index.html']
                 }
-            }
+            },
+			mainscss:{
+			  options: {
+                    includesDir: '<%= main_sass.unit.result_dir %>'
+                },
+                files: {
+                    'frontend/source/scss/main-import.scss': ['frontend/source/scss/main.scss']
+                }
+			}
         },
         jshint: {
             options: {
@@ -485,7 +509,7 @@ module.exports = function (grunt) {
     'clean:index_scripts_temp', 'clean:index_temp'
   ]);
    grunt.registerTask( 'sass_develop', [
-    'sass:develop', 'copy:develop_css'
+   'scss_import', 'sass:develop', 'copy:develop_css'
   ]);
    grunt.registerTask( 'develop_core', [
     'clean:develop', 'html2js', 'copy:develop_html2js',
@@ -504,10 +528,13 @@ module.exports = function (grunt) {
     'clean:index_scripts_temp', 'clean:index_temp'
   ]);
    grunt.registerTask( 'sass_release', [
-    'sass:release', 'copy:release_css'//, 'clean:sass_temp'
+   'scss_import', 'sass:release', 'copy:release_css'//, 'clean:sass_temp'
   ]);
    grunt.registerTask( 'release_full', [
     'clean:release_full', 'develop_core', 'copy:release_full'
+  ]);
+   grunt.registerTask( 'scss_import', [
+    'main_sass', 'includereplace:mainscss'
   ]);
 
   grunt.registerTask( 'release_minified', [
@@ -522,6 +549,7 @@ module.exports = function (grunt) {
     'uglify:header', 'uglify:footer', 'index_release', 'copy:release_assets'
   ]);
     // Short-hand tasks
+
 
 
 
@@ -565,6 +593,44 @@ module.exports = function (grunt) {
             }
         });
     });
+	
+	  grunt.registerMultiTask('main_sass', 'Process main.scss for sass', function () {
+
+        var ver = grunt.config('pkg.version');
+        var base = this.data.base;
+		var appfolder = [];
+		var scssfolder = [];
+		this.filesSrc.map(function (file) {
+				  // Remove base from file
+			
+				  var _check = file.substring(0, base.length);
+				
+				  if (_check == base) {
+					file = file.substring(base.length);
+				  }
+					if(file.indexOf('app/')!=-1){
+					appfolder.push(file);
+					}else
+					{
+					file=file.replace('scss/','');
+				
+					scssfolder.push(file);
+					}
+				  return file;
+		});
+		
+        var file = this.data.file;
+        var source = this.data.dir + this.data.file;
+        var target = this.data.result_dir + 'main-import.scss';
+	
+        grunt.file.copy(source, target, {
+            process: function (contents, path) {
+                
+                return grunt.template.process(contents, { data: { appfolder: appfolder,
+				scssfolder: scssfolder} });
+            }
+        });
+    });  
 	 grunt.registerMultiTask( 'karmaconfig', 'Process karma config templates', function () {
 		var base = this.data.base;
 		var scripts = this.filesSrc.map(function (file) {
