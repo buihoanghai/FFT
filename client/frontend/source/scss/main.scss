@@ -1,19 +1,2 @@
 ﻿@charset "UTF-8";
-/* define variable*/
-/*media width*/
-$screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1300px;
-
-$region-max-width: 1300px;
-$region-padding: 15px;
-$breakpoint-max: "only screen and (min-width:#{$region-max-width})";
-$main-background-color: #f1f1f1;
-$min-width:'only screen and (min-width :';
-$media-xs: "#{$min-width}#{$screen-xs})";
-$media-sm: "#{$min-width}#{$screen-sm})";
-$media-md: "#{$min-width}#{$screen-md})";
-$media-lg: "#{$min-width}#{$screen-lg})";
-
    @@include('main-import.scss')
