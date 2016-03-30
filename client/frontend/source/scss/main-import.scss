@@ -1,13 +1,15 @@
 @charset "UTF-8";
    
   @import "_common/_base.scss";
+ @import "_common/_functions.scss";
+ @import "_common/_normalize.scss";
+ @import "_common/button.scss";
  @import "_common/font-awesome.scss";
- @import "_mixins/_clearfix.scss";
- @import "_region/_region.scss";
- @import "_region/_region__container--main.scss";
- @import "_region/_region__container.scss";
- @import "_screen/_screen.scss";
- @import "foundation/_functions.scss";
+ @import "mixins/_clearfix.scss";
+ @import "region/_region.scss";
+ @import "region/_region__container--main.scss";
+ @import "region/_region__container.scss";
+ @import "screen/_screen.scss";
 
    @import "../app/app/directives/list-object/_scss/list-object.scss";
  @import "../app/app/directives/menu-top/_scss/menu-top.scss";
