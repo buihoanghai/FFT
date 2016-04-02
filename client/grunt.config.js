@@ -33,10 +33,25 @@ module.exports = {
 
      js_footer: [
 
-       'frontend/source/vendor/bower/underscore/underscore.js',
-         'frontend/source/vendor/bower/angular/angular.js',
-		  'frontend/source/vendor/bower/angular-sanitize/angular-sanitize.js',
-         'frontend/source/vendor/bower/angular-ui-router/release/angular-ui-router.js',
+        'frontend/source/vendor/bower/lodash/lodash.js',
+	   	'frontend/source/vendor/bower/fastclick/lib/fastclick.js',
+		'frontend/source/vendor/bower/hammerjs/hammer.js',
+		 'frontend/source/vendor/bower/moment/min/moment.min.js',
+      'frontend/source/vendor/bower/moment/locale/sv.js',
+      'frontend/source/vendor/bower/moment/locale/nb.js',
+      'frontend/source/vendor/bower/moment/locale/nn.js',
+		
+        'frontend/source/vendor/bower/angular/angular.js',
+		'frontend/source/vendor/bower/angular-sanitize/angular-sanitize.js',
+        'frontend/source/vendor/bower/angular-ui-router/release/angular-ui-router.js',
+		'frontend/source/vendor/bower/angular-gestures/gestures.js',
+		'frontend/source/vendor/bower/angular-translate/angular-translate.js',
+		'frontend/source/vendor/bower/angular-moment/angular-moment.js',
+		'frontend/source/vendor/bower/rangy/rangy-core.js',
+        'frontend/source/vendor/bower/rangy/rangy-selectionsaverestore.js',
+		'frontend/source/vendor/bower/textAngular/dist/textAngular.min.js',
+		
+		'frontend/source/vendor/bower/angular-local-storage/dist/angular-local-storage.js'
      ],
      cdn_footer: [
      ],

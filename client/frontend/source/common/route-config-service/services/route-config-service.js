@@ -1,9 +1,3 @@
-String.prototype.toDash = function () {
-  return this.replace(/([A-Z])/g, function ($1) {
-    return "-" + $1.toLowerCase();
-  });
-};
-
 angular.module('common.routeConfig')
 
 .provider('common.routeConfig.routeConfigService', [
@@ -11,7 +5,7 @@ angular.module('common.routeConfig')
 
     function viewConfig(baseName, controllerName, tplName, options) {
       var cnf = {
-        controller: 'app.' + baseName + '.' + controllerName + 'Controller'
+        controller: 'app.' + baseName + '.' + controllerName + 'Controller',
       };
 
       cnf.controller += ' as ' + 'vm';
@@ -20,9 +14,7 @@ angular.module('common.routeConfig')
         var _t = 'app/' + baseName + '/_tpl/' + tplName + '.tpl.html';
         cnf.templateUrl = tplName ? _t : false;
       }
-      if (options && options.resolve) {
-        cnf.resolve = options.resolve;
-      }
+
       return cnf;
     }
 
@@ -36,21 +28,19 @@ angular.module('common.routeConfig')
 
       //- Controller name
       var controllerName = options && options.controller ?
-        options.controller :
-        name.replace(/[.]+/g, ' ');
+                           options.controller :
+                           _.camelCase(name.replace(/[.]+/g, ' '));
 
       //- Template name
       var tplName = options && options.tpl ?
-        baseName + "." + options.tpl :
-        (options && options.tpl === false ?
-          false :
-          name.toDash());
+                    options.tpl :
+                    (options && options.tpl === false ?
+                     false :
+                     _.kebabCase(name));
 
       //- Set view
       var view = options && options.view ? options.view : "main";
-      var p = {
-        views: {}
-      };
+      var p = { views: {} };
       p.views[view] = viewConfig(baseName, controllerName, tplName, options);
 
       //- Reload on search
@@ -59,15 +49,21 @@ angular.module('common.routeConfig')
       }
 
       //- Set state parameters
+      stateParams = ['query'];
+
       if (options && options.stateParams) {
         stateParams = stateParams.concat(options.stateParams);
       }
 
       //- Set stateparams in URL or as hidden params
       if (url) {
-        p.url = url
-      } else {
+        p.url = url + "?" + stateParams.join('&');
       }
+      else {
+        //p.params = stateParams;
+      }
+      //- Return state parameters
+      // console.log(p);
       return p;
     };
 
