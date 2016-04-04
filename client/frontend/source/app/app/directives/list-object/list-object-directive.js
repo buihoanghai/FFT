@@ -13,7 +13,7 @@
       bindToController: true,
       controller: 'app.listObjectController as vm',
       restrict: 'EA',
-      templateUrl: 'app/app/directives/list-object/_tpl/list-object.tpl.html'
+      templateUrl: 'app/app/directives/list-object/_tpl/list-object-1.tpl.html'
     };
     return directive;
 

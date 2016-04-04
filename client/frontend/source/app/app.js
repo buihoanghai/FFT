@@ -1,4 +1,4 @@
-﻿angular.module('app', [
+﻿          angular.module('app', [
   'ui.router',
   'angular-gestures',
   'angularMoment',
@@ -15,14 +15,14 @@
   'common.routeConfig',
   'common.window-resize-listener',
   'common.kitCookies',
-  'common.pageTitle',
   'common.translateHighlight',
   'LocalStorageModule'
 ]).config([
   'localStorageServiceProvider',
   'hammerDefaultOptsProvider',
-  'translateHighlightServiceProvider',
- function appConfig(localStorageServiceProvider, hammerDefaultOptsProvider, translateHighlightServiceProvider) {
+  'common.translateHighlight.translateHighlightServiceProvider',
+  '$provide',
+ function appConfig(localStorageServiceProvider, hammerDefaultOptsProvider, translateHighlightServiceProvider, $provide) {
 
    //- Configure local storage settings
    localStorageServiceProvider.setPrefix('dm');

@@ -1,2 +1,6 @@
-angular.module('templates-common', []);
+angular.module('templates-common', ['common/translate-highlight/_tpl/translate-highlight-tooltip.tpl.html']);
 
+angular.module("common/translate-highlight/_tpl/translate-highlight-tooltip.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("common/translate-highlight/_tpl/translate-highlight-tooltip.tpl.html",
+    "<div class=\"translate-highlight-tooltip\" ng-show=\"$root.showHighlightTranslations\" ng-class=\"contenttype === 'html' ? 'htmlmode' : ''\"><div class=\"translate-highlight-tooltip__key-name\"><strong>Language:</strong> <span ng-bind=\"$translate.use()\"></span>&nbsp; <strong>Translate key:</strong><br><span ng-bind=\"key\"></span></div><form ng-submit=\"updateTranslation()\"><div class=\"row collapse\"><div class=\"small-10 columns\"><input ng-show=\"contenttype === 'text'\" type=\"text\" ng-model=\"value\" placeholder=\"{{key}}\"><textarea rows=\"5\" ng-show=\"contenttype === 'html'\" ng-model=\"value\" placeholder=\"{{key}}\"></textarea></div><div class=\"small-2 columns\"><button type=\"submit\" class=\"postfix\">Go</button></div></div></form></div>");
+}]);
