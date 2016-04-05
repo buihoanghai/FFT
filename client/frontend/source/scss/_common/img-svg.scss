@@ -1,0 +1,19 @@
+
+img, svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img:not([src]) {
+  display: none;
+}
+
+.iconic-property-accent,
+.iconic-property-fill,
+.iconic-property-stroke {
+  fill: #fff;
+  stroke: #fff;
+}
+.iconic {
+    cursor: pointer;
+}

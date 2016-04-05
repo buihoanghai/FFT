@@ -1,0 +1,16 @@
+.long-text-container {
+  line-height: 1.6em;
+  max-width: 720px;
+  font-weight: normal;
+  letter-spacing: .4px;
+  color: #000;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family;
+  }
+}
+
+.long-text-container--alt-font {
+  @extend .long-text-container;
+  font-family: $alt-font-family;
+}

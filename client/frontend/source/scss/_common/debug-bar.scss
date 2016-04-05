@@ -1,0 +1,25 @@
+.debug-bar {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  width: 40px;
+  display: none;
+
+  @media screen and (min-width: 649px) {
+    display: block;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  .language-icon-black {
+    stroke: #000;
+    fill: #000;
+  }
+
+  .language-icon-white {
+    stroke: #fff;
+    fill: #fff;
+  }
+}

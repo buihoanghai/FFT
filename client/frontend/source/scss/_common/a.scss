@@ -1,0 +1,10 @@
+﻿$link-color: #052B33;
+a {
+  color: $link-color;
+  transition: color 300ms ease-out;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    color: lighten($link-color, 15%);
+  }
+}
