@@ -1,4 +1,4 @@
-﻿angular.module('app', [
+﻿          angular.module('app', [
   'ui.router',
   'LocalStorageModule',
   'ngSanitize',
@@ -18,7 +18,6 @@
   'common.routeConfig',
   'common.window-resize-listener',
   'common.kitCookies',
-  'common.pageTitle',
   'common.translateHighlight',
 
 

@@ -16,3 +16,4 @@ client/frontend/source/grunt_assets/sass.temp/
 client/frontend/source/grunt_assets/coverage/
 client/frontend/source/grunt_assets/karma.temp/
 client/frontend/source/grunt_assets/html2js.temp/
+*.orig
