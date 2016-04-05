@@ -49,6 +49,8 @@ module.exports = {
 		'frontend/source/vendor/bower/angular-moment/angular-moment.js',
 		'frontend/source/vendor/bower/rangy/rangy-core.js',
         'frontend/source/vendor/bower/rangy/rangy-selectionsaverestore.js',
+		'frontend/source/vendor/bower/textAngular/dist/textAngular-rangy.min.js',
+		'frontend/source/vendor/bower/textAngular/dist/textAngular-sanitize.min.js',
 		'frontend/source/vendor/bower/textAngular/dist/textAngular.min.js',
 		
 		'frontend/source/vendor/bower/angular-local-storage/dist/angular-local-storage.js'
