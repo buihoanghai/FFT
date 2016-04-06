@@ -32,6 +32,7 @@ $alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-se
  @import "_common/button.scss";
  @import "_common/debug-bar.scss";
  @import "_common/dl.scss";
+ @import "_common/fieldset.scss";
  @import "_common/font-awesome.scss";
  @import "_common/hr.scss";
  @import "_common/i18n-highlight.scss";
@@ -45,10 +46,16 @@ $alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-se
  @import "_common/translate-cloak.scss";
  @import "_common/valign.scss";
  @import "mixins/_clearfix.scss";
+ @import "region/_region.scss";
+ @import "region/_region__container--main.scss";
+ @import "region/_region__container.scss";
+ @import "screen/_screen.scss";
 
-   @import "../app/app/directives/left-aside/_scss/left-aside.scss";
- @import "../app/dashboard/_scss/dashboard.scss";
- @import "../app/topic/_scss/topic.scss";
- @import "../app/topic/_scss/topics.scss";
+   @import "../app/app/directives/list-object/_scss/list-object-1.scss";
+ @import "../app/app/directives/list-object/_scss/list-object.scss";
+ @import "../app/app/directives/menu-top/_scss/menu-top.scss";
+ @import "../app/app/directives/search/_scss/search.scss";
+ @import "../app/home/_scss/home.scss";
+ @import "../app/object/_scss/object.scss";
 
  

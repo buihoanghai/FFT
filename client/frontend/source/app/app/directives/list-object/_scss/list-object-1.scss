@@ -1,3 +1,50 @@
-﻿.list-object-1{
+﻿.list-object-1 {
+    .object {
+        display: inline-block;
+        width: 292px;
+        height: 369px;
+        padding: 10px;
+    }
 
+    .object-image-container {
+        .object-image {
+            display: block;
+            background: #f3f5f6;
+            max-width: 270px;
+            height: auto;
+            margin: 0 auto 20px;
+            padding: 17px 22px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    .object-thumbs {
+        transition: opacity .3s, max-height .2s .2s, margin .2s .2s;
+        clear: both;
+        overflow: hidden;
+        margin: 0 -2px;
+        margin-bottom: 16px;
+        list-style: none;
+            text-align: center;
+    }
+
+    .object-thumb {
+        display: inline-block;
+        margin: 4px 2px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            background: #f3f5f6;
+        }
+    }
 }
