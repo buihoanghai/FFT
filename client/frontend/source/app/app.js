@@ -1,4 +1,4 @@
-﻿          angular.module('app', [
+﻿angular.module('app', [
   'ui.router',
   'LocalStorageModule',
   'ngSanitize',
@@ -8,6 +8,7 @@
 
   'app.home',
   'app.object',
+  'app.product',
   'templates-app',
   'templates-common',
   'pascalprecht.translate',

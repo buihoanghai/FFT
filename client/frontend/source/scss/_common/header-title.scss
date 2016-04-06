@@ -1,0 +1,23 @@
+﻿.header-title {
+    margin-bottom: 21px;
+    display: block;
+    margin: 0 0 27px;
+    background: #009587;
+    padding: 5px 15px;
+    @include box-shadow(3px 4px 5px rgba(0,0,0,.14));
+
+    h1 {
+        font-size: 20px;
+        line-height: 14px;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @media #{$media-sm} {
+            font-size: 16px;
+        }
+        @media #{$media-md} {
+            font-size: 20px;
+        }
+    }
+}
