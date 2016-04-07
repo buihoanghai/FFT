@@ -160,4 +160,16 @@ button, .button {
     width: 80px;
     height: 50px;
     animation: ripple 0.75s ease-out;
+
+    @media #{$media-xs} {
+        width: 80px;
+        height: 50px;
+        padding: 5px;
+        width: 70px;
+        height: 45px;
+    }
+}
+
+.un-action {
+    background-color: aquamarine;
 }
