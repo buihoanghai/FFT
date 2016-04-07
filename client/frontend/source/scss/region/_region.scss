@@ -1,9 +1,0 @@
-$main-background-color: #f1f1f1;
-$region-max-width: 1300px;
-$region-padding: 15px;
-$breakpoint-max: "only screen and (min-width:#{$region-max-width})";
-.region { 
-    @include clearfix();
-    display: block;
-    background-color: $main-background-color;
-} 

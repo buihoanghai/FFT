@@ -37,6 +37,16 @@
             content: " ";
         }
 
+        &:after {
+            display: block;
+            content: ".";
+            clear: both;
+            font-size: 0;
+            line-height: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
         li.item {
             overflow: hidden;
             text-align: left;
