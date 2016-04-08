@@ -1,17 +1,17 @@
 ﻿(function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app')
-        .controller('app.topIconMenuController', topIconMenuController);
+  angular
+      .module('app')
+      .controller('app.topIconMenuController', topIconMenuController);
 
-    topIconMenuController.$inject = ['$location'];
+  topIconMenuController.$inject = ['$rootScope'];
 
-    function topIconMenuController($location) {
-        var vm = this;
-        vm.id = 'topIconMenuController';
-        activate();
+  function topIconMenuController($rootScope) {
+    var vm = this;
+    vm.id = 'topIconMenuController';
+    activate();
 
-        function activate() { }
-    }
+    function activate() { }
+  }
 })();

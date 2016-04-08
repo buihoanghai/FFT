@@ -1,17 +1,16 @@
 ﻿<div class="top-icon-menu clear-float">
-  <label>
+  <label for="ck-swipe-menu" ng-click="vm.toogleSwipeMenu()">
     <i class="fa fa-align-justify"></i>
   </label>
   <label for="ck-mini-form-search"  class="top-search">
     <i class="fa fa-search"></i>
   </label>
-  <label class="top-cart">
+  <label for="ck-mini-cart" class="top-cart">
       <i class="fa fa-shopping-cart"></i>
   </label>
 </div>
-
-<div class="hidden-form">
-  <input type="checkbox" name="top-icon" class="hidden" id="ck-mini-form-search" />
+<div class="hidden-mini-form">
+  <input type="checkbox" class="hidden" id="ck-mini-form-search" />
   <form class="mini-search" name="miniSearch">
     <div class="form-search">
       <input id="mini-search" type="text" placeholder="Search" />
@@ -20,4 +19,17 @@
       </button>
     </div>
   </form>
+ 
+</div>
+<div class="hidden-mini-form">
+  <input type="checkbox" class="hidden" id="ck-mini-cart" />
+  <div class="mini-cart">
+    <div class="cart-content" >
+      You have no items in your shopping cart.
+    </div>
+  </div>
+</div>
+<input type="checkbox" class="hidden" id="ck-swipe-menu" />
+<div class="swipe-menu">
+
 </div>
