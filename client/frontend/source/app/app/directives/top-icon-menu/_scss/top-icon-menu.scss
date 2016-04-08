@@ -1,0 +1,66 @@
+﻿.top-icon-menu {
+    width: 100%;
+    max-width: 100%;
+    line-height: 20px;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: block;
+    height: 50px;
+    background-color: #323232;
+
+    & > label {
+        float: left;
+        border-right: 1px solid #232323;
+        height: 50px;
+        padding: 10px 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 9999;
+
+        &:hover {
+            color: #fe5621;
+        }
+    }
+
+
+
+    .top-search, .top-cart {
+        float: right;
+        border-left: 1px solid #232323;
+        border-right-width: 0;
+        overflow: hidden;
+    }
+}
+
+.hidden-form {
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.mini-search {
+    float: right;
+    margin-right: 5px;
+    max-height: 0;
+    overflow: hidden;
+    @include transition(max-height  .3s);
+
+    #mini-search {
+        width: 200px;
+        display: inline-block;
+        border-radius: 0;
+    }
+}
+
+#ck-mini-form-search {
+    &:checked {
+        & ~ .mini-search {
+            max-height: 100px;
+        }
+    }
+}
