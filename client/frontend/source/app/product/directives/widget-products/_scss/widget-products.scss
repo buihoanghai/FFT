@@ -32,19 +32,10 @@
         position: relative;
         margin-bottom: 30px;
 
-        &:before, :after {
-            display: table;
-            content: " ";
-        }
-
-        &:after {
-            display: block;
-            content: ".";
-            clear: both;
-            font-size: 0;
-            line-height: 0;
-            height: 0;
-            overflow: hidden;
+        &:last-child {
+            li:last-child {
+                border-bottom: none;
+            }
         }
 
         li.item {
@@ -54,10 +45,12 @@
             padding-bottom: 20px;
             margin: 0 0 20px;
             float: left;
+            border-bottom: 10px solid $container-background-color;
 
             @media #{$media-sm} {
                 text-align: center;
                 overflow: visible;
+                border-bottom: none;
             }
         }
 
@@ -68,7 +61,7 @@
             right: 0;
             left: 0;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
             @include box-shadow(none);
             @include transform(translate(0px, 0px));
         }
@@ -280,6 +273,7 @@
         height: 300px;
 
         .item-wrapper {
+            max-width: 300px;
             top: 0;
             right: -11px;
             left: -11px;
@@ -331,6 +325,6 @@
     }
 
     @media #{$media-md} {
-        height: 370px;
+        height: 350px;
     }
 }
