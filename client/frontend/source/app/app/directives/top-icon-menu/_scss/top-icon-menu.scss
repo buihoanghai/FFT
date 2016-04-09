@@ -82,9 +82,9 @@
     background-color: #323232;
     z-index: 999;
     border-top: 1px solid #232323;
-     @include transition((left 300ms ease-in-out));
+    @include transition((left 300ms ease-in-out));
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #ck-mini-form-search {
@@ -102,10 +102,44 @@
         }
     }
 }
+
 #ck-swipe-menu {
     &:checked {
         & ~ .swipe-menu {
             left: 0;
         }
+    }
+}
+
+.menu-item {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 10px 20px 11px;
+    position: relative;
+    border-bottom: 1px solid #232323;
+
+    &:hover, &:focus {
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: #444444;
+    }
+
+    .fa {
+        font-size: 1.8em;
+    }
+
+    .fa-chevron-down {
+        font-size: .9em;
+        margin-top: 10px;
+        margin-right: -5px;
+    }
+
+    span {
+        margin-left: 10px;
     }
 }
