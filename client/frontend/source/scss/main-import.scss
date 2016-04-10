@@ -52,7 +52,8 @@ $alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-se
  @import "_common/valign.scss";
  @import "mixins/_clearfix.scss";
 
-   @import "../app/app/directives/list-object/_scss/list-object.scss";
+   @import "../app/app/directives/header-page/_scss/header-page.scss";
+ @import "../app/app/directives/list-object/_scss/list-object.scss";
  @import "../app/app/directives/menu-top/_scss/menu-top.scss";
  @import "../app/app/directives/search/_scss/search.scss";
  @import "../app/app/directives/top-icon-menu/_scss/top-icon-menu.scss";

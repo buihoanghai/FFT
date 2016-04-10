@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app" ng-controller="app.appController">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <meta name="fragment" content="!">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <meta name="fragment" content="!">
 
   <title ng-bind="pageTitle">Fresh Food Transfer</title>
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.<%= version %>.png">
@@ -13,13 +13,15 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,900&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/st.<%= version %>.css" />
-    @@include('grunt_assets/index.scripts.header.html')
+  @@include('grunt_assets/index.scripts.header.html')
 </head>
 <body ng-style="$root.bodyStyle">
-<div top-icon-menu></div> 
-<div class="container">
-  <div ui-view="main"></div>
-</div>
-@@include('grunt_assets/index.scripts.footer.html')
+  <div top-icon-menu></div>
+  <div class="container">
+    <div header-page></div>
+
+    <div ui-view="main"></div>
+  </div>
+  @@include('grunt_assets/index.scripts.footer.html')
 </body>
-</html> 
+</html>

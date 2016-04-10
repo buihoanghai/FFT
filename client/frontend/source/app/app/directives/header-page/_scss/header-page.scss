@@ -1,0 +1,193 @@
+﻿.header-page {
+    .logo {
+        text-align: center;
+        margin-top: 0;
+
+        @media #{$media-sm} {
+            width: 425px;
+            float: left;
+        }
+
+        .fresh {
+            color: #fff;
+            font-family: sans-serif;
+        }
+
+        .food {
+            color: green;
+            font-family: fantasy;
+        }
+
+        .transfer {
+            font-family: serif;
+        }
+    }
+
+    .header-phone {
+        display: none;
+        margin-top: 13px;
+        font-size: 1.2em;
+        color: #fff;
+        margin-left: 50px;
+
+        @media #{$media-sm} {
+            display: inline-block;
+        }
+
+        .fa-phone {
+            color: #5f666b;
+            font-size: 34px;
+            line-height: 34px;
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 34px;
+            color: #fff;
+            vertical-align: top;
+        }
+    }
+
+    .header-dropdown {
+        display: none;
+        float: right;
+        margin: 21px;
+
+        @media #{$media-sm} {
+            display: inline-block;
+        }
+
+        .header-dropdown-icon {
+            font-size: .6em;
+
+            i {
+                color: #fff;
+
+                &:hover {
+                    color: #fe5621;
+                }
+            }
+
+            .fa-close {
+                color: #99a4ab;
+            }
+        }
+
+        .header-dropdown-content {
+            max-height: 0;
+            position: absolute;
+            right: 0;
+            top: 45px;
+            overflow: hidden;
+            background: cornsilk;
+            min-width: 290px;
+            @include box-shadow(4px 4px 4px rgba(0,0,0,.4));
+            z-index: 999;
+            @include transition(.3s);
+
+            .links {
+                padding: 25px 25px 0 25px;
+
+                li {
+                    padding: 0;
+                    width: 100%;
+                    padding-bottom: 24px;
+
+                    a {
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 16px;
+                        text-decoration: none;
+                        color: #99a4ab;
+
+                        span {
+                            padding-left: 30px;
+                        }
+
+                        &:hover {
+                            color: #363f45;
+                        }
+                    }
+                }
+            }
+
+            .welcome-msg {
+                color: #fe5621;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 24px 25px;
+                border-top: 1px solid #ebecec;
+                border-bottom: 1px solid #ebecec;
+            }
+
+            .header-buttons {
+                padding: 30px 25px 15px;
+
+                .header-button {
+                    position: relative;
+                    margin-bottom: 15px;
+
+                    .select-label-name, .header_currency-label {
+                        font-size: 14px;
+                        line-height: 16px;
+                        float: left;
+                        display: inline-block;
+                        padding-right: 3px;
+                    }
+
+                    & > a {
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-transform: capitalize;
+                        text-align: left;
+                        display: block;
+                        float: right;
+                    }
+
+                    ul {
+                        max-height: 0;
+                        overflow: hidden;
+                        text-align: right;
+                        padding: 0;
+                        z-index: 999;
+                        margin-top: 10px;
+                        @include transition(.3s);
+
+                        li {
+                            float: none;
+                            display: block;
+                            padding-left: 0px;
+                            border-bottom: 1px solid #99A4AB;
+
+                            &:first-child {
+                                border-top: 1px solid #99A4AB;
+                            }
+
+                            a {
+                                display: block;
+                                font-size: 12px;
+                                line-height: 16px;
+                                color: #99A4AB;
+                                padding: 5px 10px;
+                                padding-right: 0;
+                                min-height: 18px;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        ul {
+                            max-height: 150px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.open {
+            .header-dropdown-content {
+                max-height: 500px;
+            }
+        }
+    }
+}

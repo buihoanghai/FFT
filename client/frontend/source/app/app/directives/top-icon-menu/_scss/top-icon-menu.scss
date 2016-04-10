@@ -34,6 +34,10 @@
         border-right-width: 0;
         overflow: hidden;
     }
+
+    .summary-top {
+        font-size: .8em;
+    }
 }
 
 .hidden-mini-form {
@@ -141,5 +145,44 @@
 
     span {
         margin-left: 10px;
+    }
+}
+
+.language-list {
+    background: 0 #222222;
+    left: 0;
+    padding: 0;
+    position: relative;
+    right: auto;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    @include transition(.3s);
+
+    &.open {
+        max-height: 50px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    li {
+        float: left;
+
+        &:first-child {
+            padding-left: 20px;
+        }
+
+        a {
+            padding: 14px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+
+            &.selected {
+                color: #b90100;
+            }
+        }
     }
 }

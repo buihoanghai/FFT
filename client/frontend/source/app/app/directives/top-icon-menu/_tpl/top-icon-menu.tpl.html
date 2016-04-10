@@ -7,6 +7,7 @@
   </label>
   <label for="ck-mini-cart" class="top-cart">
     <i class="fa fa-shopping-cart"></i>
+    <span class="summary-top">0</span>
   </label>
 </div>
 <div class="hidden-mini-form">
@@ -42,11 +43,29 @@
     <span>User</span>
   </a>
   <a class="menu-item">
+    <i class="fa fa-check-square-o fa-2x">
+    </i>
+    <span>Check out</span>
+  </a>
+  <a class="menu-item" ng-click="vm.toogleLanguageList()">
     <i class="fa fa-globe fa-2x">
     </i>
     <span>Your Language:</span>
     <i class="fa fa-chevron-down fa-2x pull-right">
     </i>
   </a>
-
+  <ul class="language-list" ng-class="{'open':vm.options.showLanguageList}">
+    <li>
+      <a class="selected" title="en_US">   <strong>en</strong></a>
+    </li>
+    <li>
+      <a title="de_DE">   <strong>de</strong></a>
+    </li>
+    <li>
+      <a title="es_ES">   <strong>es</strong></a>
+    </li>
+    <li>
+      <a title="ru_RU">   <strong>ru</strong></a>
+    </li>
+  </ul>
 </div>

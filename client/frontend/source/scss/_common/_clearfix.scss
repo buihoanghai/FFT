@@ -33,7 +33,6 @@
 
 .clear-float {
     &:before, :after {
-        display: table;
         content: " ";
     }
 

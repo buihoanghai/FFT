@@ -1,0 +1,79 @@
+﻿<div class="header-page clear-float">
+  <h1 class="logo">
+    <span class="fresh">Fresh</span>
+    <span class="food">Food</span>
+    <span class="transfer">Transfer</span>
+  </h1>
+  <div class="header-phone">
+    <i class="fa fa-phone"></i>
+    <span>093-254-1088</span>
+  </div>
+  <div class="header-dropdown" ng-class="{'open':vm.options.showMenu}">
+    <div class="header-dropdown-icon">
+      <a ng-click="vm.toogleMenu()">
+        <i class="fa fa-align-justify fa-2x"
+           ng-class="{'fa-align-justify':!vm.options.showMenu,'fa-close':vm.options.showMenu}"></i>
+      </a>
+    </div>
+    <div class="header-dropdown-content">
+      <div class="quick-access">
+        <ul class="links clear-float">
+          <li class="first">
+            <a href="" title="My Account" class="my-account-link">
+              <i class="fa fa-user"></i>
+              <span>
+                My Account
+              </span>
+            </a>
+          </li>
+          <li >
+            <a href="" title="My Cart" >
+              <i class="fa fa-shopping-cart"></i>
+              <span>
+                My Cart
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Checkout">
+              <i class="fa fa-check-square-o"></i>
+              <span>
+                Checkout
+              </span>
+            </a>
+          </li>
+          <li class="last">
+            <a href="" title="Log-in">
+              <i class="fa fa-sign-in"></i>
+              <span>
+                Log-in
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="welcome-msg">Welcome to our online store! </p>
+      <div class="header-buttons">
+        <div class="header-button lang-list" ng-class="{'open':vm.options.showLanguageList}">
+          <span class="select-label-name">Your Language : </span>
+          <a title="Language" ng-click="vm.toogleLanguageList()">English</a>
+          <div class="clear"></div>
+          <ul>
+            <li>
+              <a class="selected" title="en_US">English</a>
+            </li>
+            <li>
+              <a title="de_DE">German</a>
+            </li>
+            <li>
+              <a title="es_ES">Spanish</a>
+            </li>
+            <li>
+              <a title="ru_RU">Russian</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,19 +18,31 @@
     return directive;
 
     function link(scope, element, attrs) {
+      scope.vm.options = getDefaultOptions();
       scope.vm.toogleSwipeMenu = toogleSwipeMenu;
+      scope.vm.toogleLanguageList = toogleLanguageList;
 
       setSwipeMenuHeigh();
       scope.$on("window-resized", setSwipeMenuHeigh);
+
+      function getDefaultOptions() {
+        return {
+          showLanguageList: false
+        }
+      }
       function toogleSwipeMenu() {
         var style = document.body.style;
         style.overflow = style.overflow ? '' : 'hidden';
+      }
+      function toogleLanguageList() {
+        scope.vm.options.showLanguageList = !scope.vm.options.showLanguageList;
       }
       function setSwipeMenuHeigh() {
         var swipeMenu = angular.element(document.querySelector('.swipe-menu'));
         var heigh = window.innerHeight - 50;
         swipeMenu.css('height', heigh + 'px');
       }
+
     }
   }
 
