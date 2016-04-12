@@ -179,7 +179,9 @@
             text-transform: uppercase;
             font-weight: bold;
             color: #fff;
-
+            &:hover{
+                background-color: black;
+            }
             &.selected {
                 color: #b90100;
             }

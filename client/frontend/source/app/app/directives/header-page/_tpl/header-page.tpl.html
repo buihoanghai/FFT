@@ -4,18 +4,18 @@
     <span class="food">Food</span>
     <span class="transfer">Transfer</span>
   </h1>
-  <div class="header-phone">
+  <div class="phone">
     <i class="fa fa-phone"></i>
     <span>093-254-1088</span>
   </div>
-  <div class="header-dropdown" ng-class="{'open':vm.options.showMenu}">
-    <div class="header-dropdown-icon">
+  <div class="dropdown" ng-class="{'open':vm.options.showMenu}">
+    <div class="dropdown-icon">
       <a ng-click="vm.toogleMenu()">
         <i class="fa fa-align-justify fa-2x"
            ng-class="{'fa-align-justify':!vm.options.showMenu,'fa-close':vm.options.showMenu}"></i>
       </a>
     </div>
-    <div class="header-dropdown-content">
+    <div class="dropdown-content">
       <div class="quick-access">
         <ul class="links clear-float">
           <li class="first">
@@ -53,8 +53,8 @@
         </ul>
       </div>
       <p class="welcome-msg">Welcome to our online store! </p>
-      <div class="header-buttons">
-        <div class="header-button lang-list" ng-class="{'open':vm.options.showLanguageList}">
+      <div class="lang-list">
+        <div class="lang" ng-class="{'open':vm.options.showLanguageList}">
           <span class="select-label-name">Your Language : </span>
           <a title="Language" ng-click="vm.toogleLanguageList()">English</a>
           <div class="clear"></div>

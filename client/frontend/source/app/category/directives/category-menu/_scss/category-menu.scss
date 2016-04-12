@@ -1,0 +1,45 @@
+﻿.category-menu {
+    margin-bottom: 1px;
+    background-color: #fff;
+    height: 50px;
+    position: relative;
+    z-index: 999;
+
+    .header-menu {
+        padding: 0 15px;
+        line-height: 50px;
+        cursor: pointer;
+        border-bottom: 1px solid black;
+
+        span {
+            color: #455058;
+        }
+
+        i {
+            float: right;
+            line-height: 50px;
+        }
+    }
+
+
+
+    .hidden-menu {
+        max-height: 0;
+        overflow: hidden;
+        @include transition(.5s);
+
+        &.open {
+            max-height: 500px;
+        }
+
+        ul {
+            li {
+                line-height: 45px;
+                background-color: #fff;
+                border-bottom: 1px solid;
+                padding: 0 15px;
+                font-size: 20px;
+            }
+        }
+    }
+}

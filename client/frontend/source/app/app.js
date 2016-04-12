@@ -9,6 +9,7 @@
   'app.home',
   'app.object',
   'app.product',
+  'app.category',
   'templates-app',
   'templates-common',
   'pascalprecht.translate',

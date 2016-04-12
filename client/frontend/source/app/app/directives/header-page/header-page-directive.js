@@ -11,6 +11,7 @@
     var directive = {
       link: link,
       bindToController: true,
+      scope: {},
       controller: 'app.headerPageController as vm',
       restrict: 'EA',
       templateUrl: 'app/app/directives/header-page/_tpl/header-page.tpl.html'

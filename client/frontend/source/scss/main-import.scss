@@ -57,6 +57,8 @@ $alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-se
  @import "../app/app/directives/menu-top/_scss/menu-top.scss";
  @import "../app/app/directives/search/_scss/search.scss";
  @import "../app/app/directives/top-icon-menu/_scss/top-icon-menu.scss";
+ @import "../app/category/_scss/category.scss";
+ @import "../app/category/directives/category-menu/_scss/category-menu.scss";
  @import "../app/home/_scss/home.scss";
  @import "../app/object/_scss/object.scss";
  @import "../app/product/_scss/product.scss";

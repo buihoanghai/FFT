@@ -11,6 +11,7 @@
     var directive = {
       link: link,
       bindToController: true,
+      scope: {},
       controller: 'app.topIconMenuController as vm',
       restrict: 'EA',
       templateUrl: 'app/app/directives/top-icon-menu/_tpl/top-icon-menu.tpl.html'

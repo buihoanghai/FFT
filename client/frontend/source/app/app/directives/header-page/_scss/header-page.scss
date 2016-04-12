@@ -23,7 +23,7 @@
         }
     }
 
-    .header-phone {
+    .phone {
         display: none;
         margin-top: 13px;
         font-size: 1.2em;
@@ -48,7 +48,7 @@
         }
     }
 
-    .header-dropdown {
+    .dropdown {
         display: none;
         float: right;
         margin: 21px;
@@ -57,7 +57,7 @@
             display: inline-block;
         }
 
-        .header-dropdown-icon {
+        .dropdown-icon {
             font-size: .6em;
 
             i {
@@ -73,7 +73,7 @@
             }
         }
 
-        .header-dropdown-content {
+        .dropdown-content {
             max-height: 0;
             position: absolute;
             right: 0;
@@ -120,14 +120,14 @@
                 border-bottom: 1px solid #ebecec;
             }
 
-            .header-buttons {
+            .lang-list {
                 padding: 30px 25px 15px;
 
-                .header-button {
+                .lang {
                     position: relative;
                     margin-bottom: 15px;
 
-                    .select-label-name, .header_currency-label {
+                    .select-label-name{
                         font-size: 14px;
                         line-height: 16px;
                         float: left;
@@ -185,7 +185,7 @@
         }
 
         &.open {
-            .header-dropdown-content {
+            .dropdown-content {
                 max-height: 500px;
             }
         }

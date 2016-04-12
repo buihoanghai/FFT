@@ -273,18 +273,19 @@
         height: 300px;
 
         .item-wrapper {
+            position: absolute !important;
             max-width: 300px;
+            bottom: 0;
             top: 0;
             right: -11px;
             left: -11px;
-            bottom: auto;
             -webkit-transition: -webkit-box-shadow .2s .1s ease-in, -webkit-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
             -moz-transition: -moz-box-shadow .2s .1s ease-in, -moz-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
             -o-transition: -o-box-shadow .2s .1s ease-in, -o-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
             transition: box-shadow .2s .1s ease-in, transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
-
+             
             &:hover {
-                position: absolute;
+                bottom: auto;
                 z-index: 20;
                 padding-left: 22px;
                 padding-right: 22px;

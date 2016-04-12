@@ -11,6 +11,7 @@
     var directive = {
       link: link,
       bindToController: true,
+      scope: {},
       controller: 'app.searchController as vm',
       restrict: 'EA',
       templateUrl: 'app/app/directives/search/_tpl/search.tpl.html'

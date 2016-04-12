@@ -1,6 +1,6 @@
 ﻿(function () {
   'use strict';
-
+   
   angular
       .module('app')
       .controller('app.topIconMenuController', topIconMenuController);
@@ -15,3 +15,4 @@
     function activate() { }
   }
 })();
+ 
