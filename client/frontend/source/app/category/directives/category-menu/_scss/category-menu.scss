@@ -5,14 +5,28 @@
     position: relative;
     z-index: 1;
 
+    @media #{$media-sm} {
+        height: auto;
+        @include box-shadow(3px 4px 5px rgba(0,0,0,.14));
+    }
+
     .header-menu {
         padding: 0 15px;
         line-height: 50px;
         cursor: pointer;
         border-bottom: 1px solid black;
 
+        @media #{$media-sm} {
+            background-color: $header-background-color;
+            border: none;
+        }
+
         span {
             color: #455058;
+
+            @media #{$media-sm} {
+                color: white;
+            }
         }
 
         i {
@@ -28,17 +42,39 @@
         overflow: hidden;
         @include transition(.5s);
 
+        @media #{$media-sm} {
+            max-height: 500px;
+        }
+
         &.open {
             max-height: 500px;
         }
 
         ul {
             li {
-                line-height: 45px;
+                line-height: 40px;
                 background-color: #fff;
                 border-bottom: 1px solid;
                 padding: 0 15px;
                 font-size: 20px;
+
+                @media #{$media-sm} {
+                    border: none;
+                    line-height: 30px;
+                    font-size: 16px;
+                }
+
+                @media #{$media-md} {
+                    border: none;
+                    line-height: 35px;
+                    font-size: 18px;
+                }
+
+                @media #{$media-lg} {
+                    border: none;
+                    line-height: 40px;
+                    font-size: 20px;
+                }
             }
         }
     }

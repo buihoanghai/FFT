@@ -1,0 +1,12 @@
+.aside-index {
+    padding: 0;
+
+    @media #{$media-sm} {
+        padding: 0 15px 0 0;
+    }
+}
+
+[ui-view="main"] {
+    background-color: #fff;
+    padding: 0;
+}

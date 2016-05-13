@@ -1,4 +1,8 @@
 ﻿.header-page {
+    @media #{$media-sm} {
+        background-color: $container-background-color;
+    }
+
     .logo {
         text-align: center;
         margin-top: 0;
@@ -24,14 +28,15 @@
     }
 
     .phone {
-        display: none;
+        display: inline-block;
         margin-top: 13px;
         font-size: 1.2em;
         color: #fff;
-        margin-left: 50px;
+        margin-left: 20px;
 
         @media #{$media-sm} {
             display: inline-block;
+            margin-left: 50px;
         }
 
         .fa-phone {
@@ -49,9 +54,10 @@
     }
 
     .dropdown {
-        display: none;
+        display: inline-block;
         float: right;
         margin: 21px;
+        position: relative;
 
         @media #{$media-sm} {
             display: inline-block;
@@ -76,8 +82,8 @@
         .dropdown-content {
             max-height: 0;
             position: absolute;
-            right: 0;
-            top: 45px;
+            right: -14px;
+            top: 24px;
             overflow: hidden;
             background: cornsilk;
             min-width: 290px;
@@ -127,7 +133,7 @@
                     position: relative;
                     margin-bottom: 15px;
 
-                    .select-label-name{
+                    .select-label-name {
                         font-size: 14px;
                         line-height: 16px;
                         float: left;

@@ -1,0 +1,7 @@
+﻿.show-xs {
+    display: inherit;
+
+    @media #{$media-sm} {
+        display: none;
+    }
+}

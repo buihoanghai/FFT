@@ -16,11 +16,16 @@
   @@include('grunt_assets/index.scripts.header.html')
 </head>
 <body ng-style="$root.bodyStyle">
-  <div top-icon-menu></div>
-  <div class="container">
+  <div top-icon-menu class="clear-float show-xs"></div>
+  <header>
     <div header-page></div>
-    <div category-menu></div>
-    <div ui-view="main"></div>
+  </header>
+  <div class="container clear-float">
+
+    <aside class="col-xs-12 col-sm-3 aside-index">
+      <div category-menu></div>
+    </aside>
+    <main class="col-xs-12 col-sm-9" ui-view="main"></main>
   </div>
   @@include('grunt_assets/index.scripts.footer.html')
 </body>

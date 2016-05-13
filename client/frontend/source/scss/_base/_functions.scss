@@ -118,6 +118,7 @@ $modules: () !default;
 }
 
 @mixin transform($value...) {
+    -webkit-transform: $value;
     -o-transform: $value;
     -ms-transform: $value;
     transform: $value;

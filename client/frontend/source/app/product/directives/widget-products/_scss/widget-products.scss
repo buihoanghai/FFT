@@ -6,8 +6,7 @@
     opacity: 1;
     display: inline-block;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 9px;
+    margin: 0;
     @include transition((opacity .3s, max-height .2s .2s, margin .2s .2s));
 
     @media #{$media-xs} {
@@ -42,8 +41,7 @@
             overflow: hidden;
             text-align: left;
             position: relative;
-            padding-bottom: 20px;
-            margin: 0 0 20px;
+            padding: 5px 10px;
             float: left;
             border-bottom: 10px solid $container-background-color;
 
@@ -116,7 +114,7 @@
             clear: both;
             overflow: hidden;
             margin: 0;
-            width: 13%;
+            width: 30%;
             min-width: 50px;
             text-align: center;
 
@@ -148,10 +146,8 @@
             line-height: 18px;
             color: #009587;
             overflow: hidden;
-            margin: 0 0 16px;
             width: auto;
             display: inline-block;
-            margin-top: 15px;
 
             .regular-price {
                 display: block;
@@ -166,15 +162,12 @@
             @include float-product();
             font-size: 18px;
             font-weight: normal;
-            margin: 0 0 16px;
 
             @media #{$media-sm} {
                 max-height: 9999px;
                 opacity: 1;
                 display: inline-block;
                 padding: 0;
-                margin-top: 0;
-                margin-bottom: 9px;
             }
 
             a {
@@ -219,6 +212,10 @@
                 background: url(/assets/img/bkg_rating.<%=version%>.png) 0 0 repeat-x;
                 font-size: 0;
                 overflow: hidden;
+
+                @media #{$media-sm} {
+                    margin: 0 auto;
+                }
 
                 .rating {
                     float: left;
@@ -279,33 +276,22 @@
             top: 0;
             right: -11px;
             left: -11px;
-            -webkit-transition: -webkit-box-shadow .2s .1s ease-in, -webkit-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
-            -moz-transition: -moz-box-shadow .2s .1s ease-in, -moz-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
-            -o-transition: -o-box-shadow .2s .1s ease-in, -o-transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
-            transition: box-shadow .2s .1s ease-in, transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in;
-             
+            @include transition('box-shadow .2s .1s ease-in, transform .2s .1s ease-in, top .2s ease-in, left .2s ease-in, right .2s ease-in, padding .2s ease-in');
+
             &:hover {
                 bottom: auto;
                 z-index: 20;
-                padding-left: 22px;
-                padding-right: 22px;
-                padding-top: 22px;
-                padding-bottom: 16px;
+                padding: 10px 5px 0 14px;
                 top: -22px;
                 left: -22px;
                 right: -22px;
-                -webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.09);
-                -moz-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.09);
-                box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.09);
-                -webkit-transform: translate(-2px, -2px);
-                -moz-transform: translate(-2px, -2px);
-                -o-transform: translate(-2px, -2px);
-                -ms-transform: translate(-2px, -2px);
-                transform: translate(-2px, -2px);
-                -webkit-transition: -webkit-box-shadow .3s ease-out, -webkit-transform .3s ease-out, top .3s .3s ease-out, left .3s .3s ease-out, right .3s .3s ease-out, padding .3s .3s ease-out;
-                -moz-transition: -moz-box-shadow .3s ease-out, -moz-transform .3s ease-out, top .3s .3s ease-out, left .3s .3s ease-out, right .3s .3s ease-out, padding .3s .3s ease-out;
-                -o-transition: -o-box-shadow .3s ease-out, -o-transform .3s ease-out, top .3s .3s ease-out, left .3s .3s ease-out, right .3s .3s ease-out, padding .3s .3s ease-out;
-                transition: box-shadow .3s ease-out, transform .3s ease-out, top .3s .3s ease-out, left .3s .3s ease-out, right .3s .3s ease-out, padding .3s .3s ease-out;
+                @include box-shadow('0px 0px 13px rgba(0, 0, 0, 0.09)');
+                @include transform('translate(-2px,-2px');
+                -moz-transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, top 0.3s 0.3s ease-out, left 0.3s 0.3s ease-out, right 0.3s 0.3s ease-out, padding 0.3s 0.3s ease-out;
+                -o-transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, top 0.3s 0.3s ease-out, left 0.3s 0.3s ease-out, right 0.3s 0.3s ease-out, padding 0.3s 0.3s ease-out;
+                -webkit-transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, top 0.3s 0.3s ease-out, left 0.3s 0.3s ease-out, right 0.3s 0.3s ease-out, padding 0.3s 0.3s ease-out;
+                transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, top 0.3s 0.3s ease-out, left 0.3s 0.3s ease-out, right 0.3s 0.3s ease-out, padding 0.3s 0.3s ease-out;
+
 
                 .product-thumbs, .ratings, .actions, .desc_grid {
                     opacity: 1;
